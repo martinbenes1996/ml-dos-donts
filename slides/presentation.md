@@ -17,7 +17,7 @@ revealOptions:
 
 ## outline
 
-- identifying 10 pitfalls of ML in security domain
+- identifying 10 pitfalls of ML in *security domain*
 - prevalence in 30 top-tier conference papers
 - impact evaluation in 4 selected studies
 
@@ -34,52 +34,75 @@ revealOptions:
 
 ## sampling bias
 
-- collected data don't represent true distribution
+- P: collected data don't represent true distribution
+- S1: different estimates of the true distributions
 
 ## label inaccuracies
 
-- ground-truth labels are inaccurate
+- P: ground-truth labels are inaccurate
+- S1: use models robust to noisy labels
+- S2: model the label noise in the training data
+- S3: use label cleansing techniques
+
 
 ## data snooping
 
-- the model is trained with unavailable data
+- P: the model is trained with unavailable data
+- S (test): split the test set early
+- S (temporal): consider temporal origin of data
+- S (selective): report when dropping any samples
 
 ## spurious correlations
 
-- learning shortcut patterns in the data
+- P: learning shortcut patterns in the data
+- S: explainable AI
 
 ## biased parameter
 
-- parameters are estimated using the test set
+- P: parameters are estimated using the test set
+- S: use validation and test sets
 
 ## inappropriate baseline
 
-- evaluation without / with limited SOTA baseline
+- P: evaluation with limited or no SOTA baseline
+- S1: consider simple models - easy to explain, scalable
+- S2: consider non-learning approaches
 
 ## inappropriate performance measures
 
-- inappropriate measures of performance
-  - imbalanced dataset
-  - aggregated metrics
+- P: inappropriate measures of performance
+- S1: help practicioners understand the assessment
+- S2: account for imbalanced and multiclass datasets
+- S3: avoid over-aggregated metrics
 
 ## base rate fallacy
 
-- class imbalance is ignored during interpretation
+- P: class imbalance is ignored during interpretation
+- S1: use precision and recall
+  - misleading in a presence of sampling bias
+- S2: ROC value at tractable FP rate
+- S3: report negatives' prevalence alongside FP rate
+
 
 ## lab-only evaluation
 
-- missing discussion of practical limitations
+- P: perform experiments under strong assumptions
+- S1: consider the real-world dynamics
+  - temporal and spatial relations
+- S2: consider the real-world limitations
+  - runtime, storage
 
 ## inappropriate threat model
 
-- not considering adversarial / adaptive attacks
-
+- P: not considering adversarial / adaptive attacks
+- S:
 
 # <div />
 
 <h2>prevalence analysis</h2>
 
 - reviews of papers w.r.t pitfalls
+  - CCS, S&P, USENIX, NDSS
 - survey of the paper authors
 
 ## pitfalls by prevalence
@@ -94,5 +117,13 @@ revealOptions:
 - code attribution
 - network intrusion
 
+## mobile malware detection
+
+## vulnerability discovery
+
+## source code author attribution
+
+## network intrusion detection
 
 
+# Let's discuss!
