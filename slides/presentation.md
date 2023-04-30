@@ -32,6 +32,10 @@ revealOptions:
 | <small>label inaccuracies</small> | <small>spurious correlations</small> | <small>inappropriate measures</small> | <small>inappropriate threat model</small> |
 | | <small>biased parameters</small> | <small>base rate fallacy</small> | |
 
+## <div />
+
+<h1>data collection and labeling</h1>
+
 ## sampling bias
 
 - P: collected data don't represent true distribution
@@ -44,6 +48,10 @@ revealOptions:
 - S2: model the label noise in the training data
 - S3: use label cleansing techniques
 
+
+## <div />
+
+<h1>system design and learning</h1>
 
 ## data snooping
 
@@ -61,6 +69,10 @@ revealOptions:
 
 - P: parameters are estimated using the test set
 - S: use validation and test sets
+
+## <div />
+
+<h1>performance evaluation</h1>
 
 ## inappropriate baseline
 
@@ -84,6 +96,10 @@ revealOptions:
 - S3: report negatives' prevalence alongside FP rate
 
 
+## <div />
+
+<h1>deployment and operation</h1>
+
 ## lab-only evaluation
 
 - P: perform experiments under strong assumptions
@@ -105,8 +121,39 @@ revealOptions:
   - CCS, S&P, USENIX, NDSS
 - survey of the paper authors
 
+## paper review
+
+- 2 reviewers evaluating prevalence
+- 1 reviewer resolving disputes
+- protocol for evaluation
+  - present / partly present / not present
+  - pitfall discussed?
+
 ## pitfalls by prevalence
 
+1. Sampling bias (18/30)
+2. Data snooping (17/30)
+3. Lab-only evaluation (14/30)
+
+...
+
+## author survey
+
+- 135 authors
+- survey with 3 questions (Likert)
+  - Your publication might be affected.
+  - The pitfall frequently occurs.
+  - It is easy to avoid the pitfall.
+
+## author survey
+
+| <small>**question**</small> | <small>**task**</small> | <small>**prevalence**</small> |
+|-|-|-|
+| <small>The pitfall frequently occurs.</small> | <small>*lab-only evalutation*</small> | <small>$92\\%$</small> |
+| | <small>*base rate fallacy*</small> | <small>$77\\%$</small> |
+| | <small>*inappropriate measures*</small> | <small>$69\\%$</small> |
+| <small>The pitfall can be easily avoided.</small> | <small>*inappropriate measures*</small> | <small>$62\\%$</small> |
+| | <small>*inappropriate parameter selection*</small> | <small>$62\\%$</small> |
 
 # <div />
 
@@ -119,11 +166,23 @@ revealOptions:
 
 ## mobile malware detection
 
+- sampling bias: malware from one source
+- spurious correlation: URL is an important feature
+- inapproriate measures: accuracy
+
 ## vulnerability discovery
 
-## source code author attribution
+-
+-
+
+## code attribution
+
+-
+-
 
 ## network intrusion detection
 
+-
+-
 
 # Let's discuss!
